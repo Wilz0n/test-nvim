@@ -73,4 +73,6 @@ sudo apt install kitty
 cd ~/(home/usuario)/.config/kitty/kitty.conf
 ```
 (en caso no este agregar la carpeta de kitty y luego el "kitty.conf")
-    
+
+
+Mencionar que este codigo solo para NVIM esta hecho solo para Front (por lo menos para lo que personalmente suelo usar); Y por ultimo todo el codigo dentro de "lua" y demas tiene que estar dentro de la carpeta de "NVIM" para que este puede detectarlo de forma correcta
