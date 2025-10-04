@@ -128,6 +128,7 @@ return {
           "graphql",
           "astro",
           "marksman",
+          "angularls",
         },
         automatic_installation = true,
       })

@@ -37,3 +37,19 @@ vim.keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "Gi
 vim.keymap.set("n", "<leader>gC", "<cmd>Telescope git_bcommits<CR>", { desc = "Git: Buffer Commits" })
 vim.keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "Git: Status" })
 vim.keymap.set("n", "<leader>gbb","<cmd>Telescope git_branches<CR>", { desc = "Git: Branches" })
+
+-- Dividir verticalmente
+map("n", "<leader>sv", ":vsplit<CR>", { desc = "Dividir ventana verticalmente" })
+
+-- Dividir horizontalmente
+map("n", "<leader>sh", ":split<CR>", { desc = "Dividir ventana horizontalmente" })
+
+-- Moverse entre ventanas fácilmente
+map("n", "<leader><Left>", "<C-w>h", { desc = "Ventana izquierda" })
+map("n", "<leader><Right>", "<C-w>l", { desc = "Ventana derecha" })
+map("n", "<leader><Up>", "<C-w>k", { desc = "Ventana arriba" })
+map("n", "<leader><Down>", "<C-w>j", { desc = "Ventana abajo" })
+
+-- Ajustar tamaño
+map("n", "<leader>w=", "<C-w>=", { desc = "Igualar tamaño de ventanas" })
+map("n", "<leader>wc", "<cmd>close<CR>", { desc = "Cerrar ventana actual" })
