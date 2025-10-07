@@ -3,8 +3,10 @@
 A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
+```javascript
+
 Codigo-para: ui-transparency.lua:
-´´´
+
 -- plugins/ui-transparency.lua
 -- Transparencia para LazyVim con Tokyonight + toggle
 return {
@@ -17,12 +19,13 @@ transparent = true,
 styles = { sidebars = "transparent", floats = "transparent" },
 },
 config = function(\_, opts)
+
 -- 1) Tema base
 vim.opt.termguicolors = true
 require("tokyonight").setup(opts)
 vim.cmd.colorscheme("tokyonight")
 
-      -- 2) Utilidades
+ -- 2) Utilidades
       local set_hl = vim.api.nvim_set_hl
       local get_hl = vim.api.nvim_get_hl
       local aucmd = vim.api.nvim_create_autocmd
@@ -117,5 +120,6 @@ extra_groups = {
 exclude_groups = {},
 },
 },
+```
 }
 ´´´
