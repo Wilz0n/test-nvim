@@ -111,8 +111,6 @@ set -g @catppuccin_flavour 'mocha'  # opciones: latte, frappe, macchiato, mocha
 run '~/.tmux/plugins/tpm/tpm'
 ´´´
 
-```
-
 # Instalacion de Plugins para TMUX:
 
 ## Instalacion para plugins manager:
