@@ -7,4 +7,3 @@ bold_font        auto
 italic_font      auto
 background_opacity 0.9
 ´´´
-```
