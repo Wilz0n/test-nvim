@@ -1,4 +1,4 @@
-#Configuracion de Tmux para estilos
+# Configuracion de Tmux para estilos
 
 ```javascript
 # recargar config
@@ -111,12 +111,41 @@ set -g @catppuccin_flavour 'mocha'  # opciones: latte, frappe, macchiato, mocha
 run '~/.tmux/plugins/tpm/tpm'
 ´´´
 
-# Configuracion para Kitty:
+```
+
+# Instalacion de Plugins para TMUX:
+
+## Instalacion para plugins manager:
 
 ```javascript
-font_family      JetBrainsMono Nerd Font
-font_size        10.5
-bold_font        auto
-italic_font      auto
-background_opacity 0.9
-´´´
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'tmux-plugins/tmux-yank'
+set -g @plugin 'jaclu/tmux-which-key'
+set -g @plugin 'nikitavoloboev/tmux-kanagawa'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+
+# Inicializar TPM
+run '~/.tmux/plugins/tpm/tpm'
+
+3️⃣ Abre tmux y ejecuta:
+
+Ctrl + b + I
+
+✅ ¡Listo! Todos los plugins se descargarán y activarán automáticamente.
+
+## Instalacion de tmux-resurrect (hacer copia dentro de terminal)
+🪄 Uso
+1] Entra en modo copia: Ctrl + b + [
+
+2] Selecciona texto con el mouse o teclado.
+
+3] Presiona Enter → Se copia automáticamente al clipboard.
+
+sudo apt install xclip
+```

@@ -1,33 +1,22 @@
-# 💤 LazyVim
-
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
-
-### Configuracion para que esa transparente:
-
-```javascript
-
-Codigo-para: ui-transparency.lua:
-
+--Codigo-para: ui-transparency.lua:
 -- plugins/ui-transparency.lua
 -- Transparencia para LazyVim con Tokyonight + toggle
 return {
-{
-"folke/tokyonight.nvim",
-lazy = false,
-priority = 1000,
-opts = {
-transparent = true,
-styles = { sidebars = "transparent", floats = "transparent" },
-},
-config = function(_, opts)
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true,
+      styles = { sidebars = "transparent", floats = "transparent" },
+    },
+    config = function(_, opts)
+      -- 1) Tema base
+      vim.opt.termguicolors = true
+      require("tokyonight").setup(opts)
+      vim.cmd.colorscheme("tokyonight")
 
--- 1) Tema base
-vim.opt.termguicolors = true
-require("tokyonight").setup(opts)
-vim.cmd.colorscheme("tokyonight")
-
- -- 2) Utilidades
+      -- 2) Utilidades
       local set_hl = vim.api.nvim_set_hl
       local get_hl = vim.api.nvim_get_hl
       local aucmd = vim.api.nvim_create_autocmd
@@ -87,41 +76,38 @@ vim.cmd.colorscheme("tokyonight")
         end
       end, { desc = "UI: Toggle Transparency" })
     end,
+  },
 
-},
-
--- Opcional: para limpiar grupos rebeldes si alguna vez lo necesitas
-{
-"xiyaowong/transparent.nvim",
-lazy = true,
-opts = {
-extra_groups = {
-"NormalFloat",
-"FloatBorder",
-"NormalNC",
-"CursorLine",
-"CursorLineNr",
-"LineNr",
-"SignColumn",
-"StatusLine",
-"TelescopeNormal",
-"TelescopeBorder",
-"TelescopePromptNormal",
-"TelescopeResultsNormal",
-"TelescopePreviewNormal",
-"NeoTreeNormal",
-"NeoTreeNormalNC",
-"WhichKeyFloat",
-"CmpPmenu",
-"CmpPmenuBorder",
-"NoicePopup",
-"NoicePopupmenu",
-"NotifyBackground",
-"LazyNormal",
-},
-exclude_groups = {},
-},
-},
+  -- Opcional: para limpiar grupos rebeldes si alguna vez lo necesitas
+  {
+    "xiyaowong/transparent.nvim",
+    lazy = true,
+    opts = {
+      extra_groups = {
+        "NormalFloat",
+        "FloatBorder",
+        "NormalNC",
+        "CursorLine",
+        "CursorLineNr",
+        "LineNr",
+        "SignColumn",
+        "StatusLine",
+        "TelescopeNormal",
+        "TelescopeBorder",
+        "TelescopePromptNormal",
+        "TelescopeResultsNormal",
+        "TelescopePreviewNormal",
+        "NeoTreeNormal",
+        "NeoTreeNormalNC",
+        "WhichKeyFloat",
+        "CmpPmenu",
+        "CmpPmenuBorder",
+        "NoicePopup",
+        "NoicePopupmenu",
+        "NotifyBackground",
+        "LazyNormal",
+      },
+      exclude_groups = {},
+    },
+  },
 }
-´´´
-```
