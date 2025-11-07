@@ -1,3 +1,6 @@
+# Configuracion de Kitty
+
+```bash
 # gruvbox dark by morhetz, https://github.com/morhetz/gruvbox
 # This work is licensed under the terms of the MIT license.
 # For a copy, see https://opensource.org/licenses/MIT.
@@ -48,3 +51,5 @@ color14 #8ec07c
 # 246_gray, 245_gray
 color7  #a89984
 color15 #928374
+```
+✅ ¡Listo! Estilo Gruvbox instalado
