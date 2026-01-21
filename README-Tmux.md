@@ -1,21 +1,18 @@
 # Configuracion de Tmux "Gruvbox" y "Zsh"
 
 ```bash
-# ───────────────────────────────────────────────
-#  ~/.tmux.conf – Tema Gruvbox limpio (Wilnux)
-# ───────────────────────────────────────────────
-
-# Usa Zsh como shell principal
-set-option -g default-shell /usr/bin/zsh
-set -g default-command /usr/bin/zsh
+# Usa fish como shell principal
+set-option -g default-shell /usr/bin/fish
+set -g default-command /usr/bin/fish
 
 # Habilita 256 colores y soporte UTF-8
 set -g default-terminal "tmux-256color"
-set -as terminal-overrides ",xterm-256color:Tc"
-set -as terminal-overrides ",tmux-256color:Tc"
+# set -as terminal-overrides ",xterm-256color:Tc"
+# set -as terminal-overrides ",tmux-256color:Tc"
 
 # ¡IMPORTANTE! Passthrough para protocolos propietarios (kitty graphics)
 set -g allow-passthrough on
+set -g visual-activity off
 
 # Usar modo vi en tmux
 set -g mode-keys vi
