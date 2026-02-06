@@ -1,1 +1,4 @@
-Al momento de iniciar la instalacion con nvim y ingresar al ".config" crear carpeta llamada nvim para luego realiazar el comenando de nvim init.lua para comenzar con la configuracion inicial que seria crear "lua" para luego crear las carpetas importantes (el cual es config y plugins) 
+# 💤 LazyVim
+
+A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
