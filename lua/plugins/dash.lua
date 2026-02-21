@@ -7,6 +7,7 @@ return {
     opts = function()
       local logo = [[
 
+
 ██╗    ██╗██╗██╗     ███╗   ██╗██╗   ██╗██╗  ██╗
 ██║    ██║██║██║     ████╗  ██║██║   ██║╚██╗██╔╝
 ██║ █╗ ██║██║██║     ██╔██╗ ██║██║   ██║ ╚███╔╝
@@ -23,6 +24,7 @@ return {
       local opts = {
         theme = "doom",
         hide = { statusline = false },
+        vertical_center = true,
         config = {
           header = vim.split(logo, "\n", { trimempty = true }),
           center = {
