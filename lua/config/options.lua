@@ -1,7 +1,11 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
+
 vim.opt.relativenumber = false
+
+-- Desactivar autoformateo al guardar
+vim.g.autoformat = false
 
 -- Desactiva la detección automática de la raíz del proyecto de LazyVim
 vim.g.root_spec = { "cwd" }
