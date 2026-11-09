@@ -24,9 +24,9 @@ return {
       local opts = {
         theme = "doom",
         hide = { statusline = false },
-        vertical_center = true,
         config = {
-          header = vim.split(logo, "\n", { trimempty = true }),
+          vertical_center = true, -- en el tema doom va dentro de config
+          header = vim.list_extend(vim.split(logo, "\n", { trimempty = true }), { "", "" }), -- 2 líneas de separación bajo el logo
           center = {
             { action = "lua LazyVim.pick()()", desc = " Find File", icon = " ", key = "f" },
             { action = "ene | startinsert", desc = " New File", icon = " ", key = "n" },
